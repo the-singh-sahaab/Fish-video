@@ -8,11 +8,11 @@ This repository implements an end-to-end computer vision pipeline to detect and 
 
 Here is the final processed video showing real-time detection and bounding boxes overlaid on the fish:
 
-<video src="Pond1_ANS.mp4" controls="controls" width="100%"></video>
+[Pond1.mp4]
 
 > [!TIP]
 > *   If your Markdown viewer supports video playback, you can watch it directly above.
-> *   Alternatively, play/open the output file directly: <video src="Pond1_ANS.mp4" controls="controls" width="100%"></video>.
+> *   Alternatively, play/open the output file directly: [Pond1.mp4](file:///c:/Users/Shubh/Downloads/Shrimp/Pond1.mp4).
 > *   GitHub-compatible video player tag:
 >     <video src="Pond1_ANS.mp4" width="100%" height="auto" controls autoplay loop muted></video>
 
