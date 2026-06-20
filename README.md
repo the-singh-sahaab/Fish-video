@@ -12,7 +12,7 @@ Here is the final processed video showing real-time detection and bounding boxes
 
 > [!TIP]
 > *   If your Markdown viewer supports video playback, you can watch it directly above.
-> *   Alternatively, play/open the output file directly: [Pond1_ANS.mp4](file:///c:/Users/Shubh/Downloads/Shrimp/Pond1_ANS.mp4).
+> *   Alternatively, play/open the output file directly: <video src="Pond1_ANS.mp4" controls="controls" width="100%"></video>.
 > *   GitHub-compatible video player tag:
 >     <video src="Pond1_ANS.mp4" width="100%" height="auto" controls autoplay loop muted></video>
 
