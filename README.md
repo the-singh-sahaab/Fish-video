@@ -1,17 +1,20 @@
-# 🦐 Shrimp / Fish Detection in Pond Monitoring Videos using YOLOv8
+# 🐟 Fish Detection in Pond Monitoring Videos using YOLOv8
 
-This repository implements an end-to-end computer vision pipeline to detect and track shrimp (or fish) in pond monitoring videos. By extracting video frames, pre-processing annotations, training a state-of-the-art **YOLOv8** object detector, and running batch inference, the project automates the task of counting and observing aquatic life in real-time.
+This repository implements an end-to-end computer vision pipeline to detect and track fish in pond monitoring videos. By extracting video frames, pre-processing annotations, training a state-of-the-art **YOLOv8** object detector, and running batch inference, the project automates the task of counting and observing aquatic life in real-time.
 
 ---
 
 ## 🎬 Project Output Demo
 
-Here is the final processed video showing real-time detection and bounding boxes overlaid on the shrimp. 
+Here is the final processed video showing real-time detection and bounding boxes overlaid on the fish:
+
+![Fish Detection Output](file:///c:/Users/Shubh/Downloads/Shrimp/Pond1_ANS.mp4)
 
 > [!TIP]
-> If you are viewing this on GitHub or a markdown viewer that supports video playback, you can play the video below. Alternatively, you can open the output file directly: [Pond1_ANS.mp4](file:///c:/Users/Shubh/Downloads/Shrimp/Pond1_ANS.mp4).
-
-<video src="Pond1_ANS.mp4" width="100%" height="auto" controls autoplay loop muted></video>
+> *   If your Markdown viewer supports video playback, you can watch it directly above.
+> *   Alternatively, play/open the output file directly: [Pond1_ANS.mp4](file:///c:/Users/Shubh/Downloads/Shrimp/Pond1_ANS.mp4).
+> *   GitHub-compatible video player tag:
+>     <video src="Pond1_ANS.mp4" width="100%" height="auto" controls autoplay loop muted></video>
 
 ---
 
@@ -32,7 +35,7 @@ graph TD
 
 ## 📂 Repository Structure
 
-*   [Pond1.mp4](file:///c:/Users/Shubh/Downloads/Shrimp/Pond1.mp4) — The raw input video containing underwater/pond footage of shrimp.
+*   [Pond1.mp4](file:///c:/Users/Shubh/Downloads/Shrimp/Pond1.mp4) — The raw input video containing underwater/pond footage of fish.
 *   [Pond1_ANS.mp4](file:///c:/Users/Shubh/Downloads/Shrimp/Pond1_ANS.mp4) — The final processed video with bounding boxes and confidence labels overlaid on the detected organisms.
 *   [tr.ipynb](file:///c:/Users/Shubh/Downloads/Shrimp/tr.ipynb) — The complete Jupyter Notebook covering data preparation, frame extraction, preprocessing, YOLOv8 training, and inference.
 
@@ -56,7 +59,7 @@ The entire lifecycle of this project is encapsulated in [tr.ipynb](file:///c:/Us
 
 ### 4. Label Structuring & Pre-processing (Cell 4)
 *   **Purpose**: Align the dataset directory and handle background images.
-*   **Details**: Iterates through the images in the training dataset (`fish_project1/images/train`) and ensures every image has a corresponding label file in `fish_project1/labels/train`. If a frame has no annotations (no shrimp/fish present), the script automatically creates an **empty `.txt` label file**. In YOLO, empty label files are essential as they serve as *negative background samples*, reducing false positive rates.
+*   **Details**: Iterates through the images in the training dataset (`fish_project1/images/train`) and ensures every image has a corresponding label file in `fish_project1/labels/train`. If a frame has no annotations (no fish present), the script automatically creates an **empty `.txt` label file**. In YOLO, empty label files are essential as they serve as *negative background samples*, reducing false positive rates.
 
 ### 5. Google Drive Integration & YOLOv8 Training (Cells 5, 6, & 7)
 *   **Purpose**: Train the target object detection model.
@@ -72,7 +75,7 @@ The entire lifecycle of this project is encapsulated in [tr.ipynb](file:///c:/Us
     *   Updates local OpenCV library versions to ensure compatibility.
     *   Loads the trained model weights (`best.pt`).
     *   Iterates through each frame of the input video [Pond1.mp4](file:///c:/Users/Shubh/Downloads/Shrimp/Pond1.mp4).
-    *   Applies YOLO inference to detect shrimp/fish, overlays bounding boxes on the frame using `results[0].plot()`, and compiles the frames back into [Pond1_ANS.mp4](file:///c:/Users/Shubh/Downloads/Shrimp/Pond1_ANS.mp4) using `cv2.VideoWriter`.
+    *   Applies YOLO inference to detect fish, overlays bounding boxes on the frame using `results[0].plot()`, and compiles the frames back into [Pond1_ANS.mp4](file:///c:/Users/Shubh/Downloads/Shrimp/Pond1_ANS.mp4) using `cv2.VideoWriter`.
 
 ---
 
