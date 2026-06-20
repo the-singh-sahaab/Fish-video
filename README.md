@@ -8,7 +8,7 @@ This repository implements an end-to-end computer vision pipeline to detect and 
 
 Here is the final processed video showing real-time detection and bounding boxes overlaid on the fish:
 
-![Fish Detection Output](Pond1_ANS.mp4)
+<video src="Pond1_ANS.mp4" controls="controls" width="100%"></video>
 
 > [!TIP]
 > *   If your Markdown viewer supports video playback, you can watch it directly above.
